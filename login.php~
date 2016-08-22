@@ -9,9 +9,9 @@ if ((isset($_POST['email']) || isset($_POST['mobile'])) && isset($_POST['passwor
 	$password = $_POST['password'];
 	if (isset($_POST['mobile'])) {
 		// receiving the post params
-    		$mobile = $_POST['mobile'];
+    		$email = $_POST['email'];
     		// get the user by email and password
-    		$user = $db->getUserByMobileAndPassword($mobile, $password);
+    		$user = $db->getUserByMobileAndPassword($email, $password);
 	}else if(isset($_POST['email'])){
 		// receiving the post params
     		$email = $_POST['email'];
